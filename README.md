@@ -1,2 +1,7 @@
 # Blockchain
 This project presents a permissioned blockchain-based transparency system for Qatar’s Tamween food subsidy program. The system enables tamper-proof tracking of food batches from supplier to consumer by combining three Solidity smart contracts (BatchRegistry, ChangeNotice, and MerkleAnchor) with an off-chain database and role-based portals for regulators, retailers, and citizens. By anchoring verified lifecycle events and changes on-chain and exposing them through QR-based verification, the solution improves public trust, counters misinformation during crises, and provides an immutable audit trail for regulators. The prototype demonstrates how blockchain can strengthen food-security governance through verifiable provenance, controlled transparency, and multi-stakeholder accountability.
+## System Architecture
+
+![Tamween Blockchain Architecture](images/architecture.png)
+
+The architecture follows a hybrid on-chain/off-chain design. Core lifecycle events, approvals, and verification proofs are stored on a permissioned blockchain, while detailed documents and metadata are kept off-chain for efficiency. MoCI acts as the regulator with full write access, retailers submit controlled change notices, and consumers verify batch authenticity through QR codes that query on-chain Merkle roots. This separation ensures transparency, integrity, and scalability without exposing sensitive data.
